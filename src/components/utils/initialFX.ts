@@ -4,8 +4,11 @@ import { smoother } from "../Navbar";
 
 export function initialFX() {
   document.body.style.overflowY = "auto";
-  smoother.paused(false);
-  document.getElementsByTagName("main")[0].classList.add("main-active");
+  if (smoother && typeof smoother.paused === "function") {
+    smoother.paused(false);
+  }
+  const mainElem = document.getElementsByTagName("main")[0];
+  if (mainElem) mainElem.classList.add("main-active");
   gsap.to("body", {
     backgroundColor: "#0b080c",
     duration: 0.5,

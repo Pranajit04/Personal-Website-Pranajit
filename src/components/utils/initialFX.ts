@@ -1,4 +1,4 @@
-import { SplitText } from "gsap/SplitText";
+import { SimpleSplitText as SplitText } from "./simpleSplitText";
 import gsap from "gsap";
 
 export function initialFX() {

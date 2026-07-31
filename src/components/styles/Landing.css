@@ -356,3 +356,160 @@ h2.landing-info-h2 {
     font-size: 75px;
   }
 }
+
+/* Terminal Hero Custom Styling */
+.terminal-hero {
+  max-width: 860px;
+  width: 92%;
+  margin: 120px auto 30px auto;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 10px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px rgba(20, 184, 166, 0.15);
+  overflow: hidden;
+  font-family: var(--font-mono), monospace;
+  position: relative;
+  z-index: 20;
+}
+
+.terminal-header {
+  background: #1e293b;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid #334155;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot.red {
+  background-color: #ff5f56;
+}
+
+.dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.dot.green {
+  background-color: #27c93f;
+}
+
+.terminal-title {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+.terminal-body {
+  padding: 28px 24px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.terminal-prompt-line {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #f8fafc;
+  word-break: break-word;
+}
+
+.prompt-symbol {
+  color: #f59e0b;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.typewriter-text {
+  color: #2dd4bf;
+}
+
+.terminal-cursor {
+  color: #f59e0b;
+  animation: blink 1s infinite;
+  margin-left: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.terminal-status-line {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding-top: 16px;
+  border-top: 1px dashed #334155;
+}
+
+.status-badge {
+  background-color: rgba(20, 184, 166, 0.15);
+  color: #14b8a6;
+  border: 1px solid rgba(20, 184, 166, 0.4);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.status-info {
+  font-size: 14px;
+  color: #cbd5e1;
+}
+
+.status-info .separator {
+  color: #f59e0b;
+  margin: 0 4px;
+}
+
+.terminal-subtext {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 20;
+}
+
+.terminal-subtext p {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .terminal-hero {
+    margin-top: 100px;
+    width: 95%;
+  }
+  .terminal-prompt-line {
+    font-size: 16px;
+  }
+  .status-info {
+    font-size: 12px;
+  }
+  .terminal-subtext p {
+    font-size: 14px;
+  }
+}
+

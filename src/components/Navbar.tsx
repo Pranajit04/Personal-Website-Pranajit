@@ -31,7 +31,9 @@ const Navbar = () => {
           e.preventDefault();
           let elem = e.currentTarget as HTMLAnchorElement;
           let section = elem.getAttribute("data-href");
-          smoother.scrollTo(section, true, "top top");
+          if (section) {
+            smoother.scrollTo(section, true, "top top");
+          }
         }
       });
     });
@@ -43,24 +45,34 @@ const Navbar = () => {
     <>
       <div className="header">
         <a href="/#" className="navbar-title" data-cursor="disable">
-          Logo
+          ~/pranajit
         </a>
         <a
-          href="mailto:example@mail.com"
+          href="mailto:prana2004jit@gmail.com"
           className="navbar-connect"
           data-cursor="disable"
         >
-          example@mail.com
+          prana2004jit@gmail.com
         </a>
         <ul>
+          <li>
+            <a data-href="#work" href="#work">
+              <HoverLinks text="WORK" />
+            </a>
+          </li>
+          <li>
+            <a data-href="#experience" href="#experience">
+              <HoverLinks text="EXPERIENCE" />
+            </a>
+          </li>
           <li>
             <a data-href="#about" href="#about">
               <HoverLinks text="ABOUT" />
             </a>
           </li>
           <li>
-            <a data-href="#work" href="#work">
-              <HoverLinks text="WORK" />
+            <a data-href="#achievements" href="#achievements">
+              <HoverLinks text="ACHIEVEMENTS" />
             </a>
           </li>
           <li>

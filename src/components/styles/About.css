@@ -1,71 +1,119 @@
 .about-section {
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  place-items: center;
-  position: relative;
-  opacity: 1;
-  height: auto;
+  padding: 100px 0;
   width: var(--cWidth);
+  max-width: var(--cMaxWidth);
   margin: auto;
 }
-.about-me {
-  padding: 50px 0px;
-  padding-bottom: 0;
-  width: 500px;
-  max-width: calc(100% - 15px);
-}
-.about-me h3 {
-  font-size: 25px;
-  text-transform: uppercase;
-  letter-spacing: 7px;
-  font-weight: 400;
-  color: var(--accentColor);
+
+.readme-container {
+  width: 100%;
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-sans), sans-serif;
 }
 
-.about-me p {
-  font-size: 33px;
+.readme-header {
+  background: #1e293b;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #334155;
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+}
+
+.readme-filename {
+  color: #2dd4bf;
   font-weight: 600;
-  line-height: 36px;
-  letter-spacing: 1px;
 }
 
-@media only screen and (min-width: 600px) {
-  .about-section {
-    justify-content: center;
-  }
+.readme-branch {
+  color: #94a3b8;
+  background: #0f172a;
+  padding: 2px 8px;
+  border-radius: 4px;
 }
-@media only screen and (min-width: 768px) {
-  .about-me {
-    width: 500px;
-    max-width: calc(100% - 70px);
-    transform: translateY(0%);
-  }
-  .about-section {
-    opacity: 1;
-  }
+
+.readme-content {
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
-@media only screen and (min-width: 1025px) {
-  .about-section {
-    width: var(--cWidth);
-    justify-content: right;
-    max-width: 1920px;
-    height: var(--vh);
-    padding: 0px;
-    opacity: 1;
-  }
-  .about-me {
-    padding: 0px;
-    width: 50%;
-  }
-  .about-me p {
-    font-size: 1.9vw;
-    line-height: 2.3vw;
-  }
+
+.readme-title {
+  font-family: var(--font-mono), monospace;
+  font-size: 28px;
+  color: #f59e0b;
+  margin: 0;
+  font-weight: 700;
 }
-@media only screen and (min-width: 1950px) {
-  .about-me p {
-    font-size: 2.5rem;
-    line-height: 2.7rem;
+
+.readme-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.readme-heading {
+  font-family: var(--font-mono), monospace;
+  font-size: 20px;
+  color: #14b8a6;
+  margin: 0;
+  font-weight: 600;
+}
+
+.readme-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin: 0;
+}
+
+.stack-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.stack-pill {
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+  color: #f8fafc;
+  background: #1e293b;
+  border: 1px solid #334155;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.readme-quote {
+  border-left: 4px solid #f59e0b;
+  padding-left: 16px;
+  margin: 0;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #94a3b8;
+}
+
+@media screen and (max-width: 768px) {
+  .readme-content {
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  .readme-title {
+    font-size: 22px;
+  }
+  .readme-heading {
+    font-size: 18px;
+  }
+  .readme-text,
+  .readme-quote {
+    font-size: 14px;
   }
 }

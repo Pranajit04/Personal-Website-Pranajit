@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
 
 :root {
-  font-family: "Geist", sans-serif;
+  font-family: "Inter", "Geist", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", "Geist", sans-serif;
 
   font-optical-sizing: auto;
   font-style: normal;
@@ -19,6 +21,8 @@
   -webkit-user-select: none;
   -moz-user-select: none;
   --accentColor: #c2a4ff;
+  --amberAccent: #f59e0b;
+  --tealAccent: #14b8a6;
   --backgroundColor: #0b080c;
   --vh: 100vh;
   --vh: 100svh;
@@ -29,7 +33,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Geist", sans-serif;
+  font-family: "Inter", "Geist", sans-serif;
 }
 body {
   overflow: hidden;

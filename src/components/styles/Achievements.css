@@ -1,0 +1,62 @@
+.achievements-section {
+  padding: 100px 0;
+  width: var(--cWidth);
+  max-width: var(--cMaxWidth);
+  margin: auto;
+  font-family: var(--font-sans), sans-serif;
+}
+
+.achievements-section h2 {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+.achievements-section h2 span {
+  color: var(--accentColor);
+}
+
+.achievements-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.achievement-badge-card {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.achievement-badge-card:hover {
+  border-color: #f59e0b;
+  box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15);
+  transform: translateY(-3px);
+}
+
+.badge-icon {
+  color: #f59e0b;
+  font-size: 16px;
+}
+
+.badge-text {
+  font-family: var(--font-mono), monospace;
+  font-size: 14px;
+  color: #f8fafc;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .achievements-section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  .achievement-badge-card {
+    width: 100%;
+  }
+}

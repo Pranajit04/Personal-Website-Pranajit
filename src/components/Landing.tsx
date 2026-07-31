@@ -1,34 +1,65 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import "./styles/Landing.css";
 
 const Landing = ({ children }: PropsWithChildren) => {
+  const fullText =
+    "Pranajit Banerjee — beginner ML engineer and Android developer, building impactful solutions.";
+  const [typedText, setTypedText] = useState("");
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      if (index <= fullText.length) {
+        setTypedText(fullText.slice(0, index));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 40);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <>
-      <div className="landing-section" id="landingDiv">
-        <div className="landing-container">
-          <div className="landing-intro">
-            <h2>Hello! I'm</h2>
-            <h1>
-              MONCY
-              <br />
-              <span>YOHANNAN</span>
-            </h1>
+    <div className="landing-section" id="landingDiv">
+      <div className="landing-container">
+        <div className="terminal-hero">
+          {/* Terminal Window Header */}
+          <div className="terminal-header">
+            <div className="terminal-dots">
+              <span className="dot red"></span>
+              <span className="dot yellow"></span>
+              <span className="dot green"></span>
+            </div>
+            <div className="terminal-title">zsh — pranajit@portfolio:~</div>
           </div>
-          <div className="landing-info">
-            <h3>A Creative</h3>
-            <h2 className="landing-info-h2">
-              <div className="landing-h2-1">Designer</div>
-              <div className="landing-h2-2">Developer</div>
-            </h2>
-            <h2>
-              <div className="landing-h2-info">Developer</div>
-              <div className="landing-h2-info-1">Designer</div>
-            </h2>
+
+          {/* Terminal Body */}
+          <div className="terminal-body">
+            <div className="terminal-prompt-line">
+              <span className="prompt-symbol">$</span>{" "}
+              <span className="typewriter-text">{typedText}</span>
+              <span className="terminal-cursor">█</span>
+            </div>
+
+            <div className="terminal-status-line">
+              <span className="status-badge">SHIPPED</span>
+              <span className="status-info">
+                3 shipped projects <span className="separator">·</span> SIH Internal Qualifier <span className="separator">·</span> Top 10 Hack Zenith
+              </span>
+            </div>
           </div>
         </div>
-        {children}
+
+        {/* Sub-text under terminal */}
+        <div className="terminal-subtext">
+          <p>
+            B.Tech CS &amp; Design student at Dr. B.C. Roy Engineering College. Former GDG on Campus Associate Manager Lead.
+          </p>
+        </div>
       </div>
-    </>
+      {children}
+    </div>
   );
 };
 
